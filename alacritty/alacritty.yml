@@ -3,9 +3,19 @@ import:
   - ~/.config/alacritty/monokai_pro.yaml
 
 window:
+  dimensions:
+    columns: 120
+    lines: 40
+
+  # padding:
+    # x: 8
+    # y: 8
+
+  dynamic_padding: false
+
   opacity: 0.8
 
-  startup_mode: Maximized
+  startup_mode: Windowed
 
   dynamic_title: true
 
@@ -14,6 +24,18 @@ window:
     general: Alacritty
 
 font:
+  normal:
+    family: "FiraCode Nerd Font"
+    style: Retina
+
+  bold:
+    family: "FiraCode Nerd Font"
+    style: Medium
+
+  italic:
+    family: "FiraCode Nerd Font"
+    style: "Medium Italic"
+
   size: 11.0
 
 draw_bold_text_with_bright_colors: true
