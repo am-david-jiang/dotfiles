@@ -1,0 +1,29 @@
+import = [
+  "~/.config/alacritty/themes/themes/catppuccin_mocha.toml",
+]
+live_config_reload = true
+
+[env]
+
+[window]
+dimensions = { columns = 120, lines = 36 }
+padding = { x = 0, y = 0 }
+dynamic_padding = false
+decorations = "Full"
+opacity = 0.9
+blur = true
+startup_mode = "Windowed"
+dynamic_title = true
+
+[scrolling]
+history = 50000
+multiplier = 5
+
+[font]
+normal = { family = "BlexMono Nerd Font" }
+size = 11.25
+builtin_box_drawing = false
+
+[cursor]
+style = { shape = "Block", blinking = "Off" }
+unfocused_hollow = true
