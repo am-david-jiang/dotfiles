@@ -1,0 +1,21 @@
+theme = "catppuccin_mocha"
+
+[editor]
+scrolloff = 5
+mouse = true
+middle-click-paste = true
+scroll-lines = 5
+shell = ['zsh', '-c']
+line-number = "relative"
+cursorline = true
+gutters = ["diagnostics", "spacer", "line-numbers", "spacer", "diff"]
+auto-completion = true
+auto-format = true
+auto-info = true
+rulers = [80]
+bufferline = "always"
+text-width = 80
+default-line-ending = "lf"
+insert-final-newline = true
+popup-border = "all"
+indent-heuristic = "tree-sitter"
