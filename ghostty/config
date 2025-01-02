@@ -1,0 +1,17 @@
+font-family = BlexMono Nerd Font
+font-size = 12
+
+adjust-cell-height = 10%
+
+theme = catppuccin-mocha
+background-opacity = 0.9
+
+window-inherit-working-directory = true
+window-inherit-font-size = true
+
+shell-integration-features = no-cursor
+cursor-style = block
+
+macos-non-native-fullscreen = false
+macos-titlebar-style = native
+macos-option-as-alt = true
