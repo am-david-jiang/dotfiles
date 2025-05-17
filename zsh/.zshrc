@@ -12,14 +12,15 @@ compinit
 # End of lines added by compinstall
 
 # Alias configuration
-alias ls='ls --color=auto'
+alias ls='eza --color=auto --icons=auto'
 alias ll='ls -l'
-alias l.='ll -A'
+alias l.='ls -Al'
 alias grep='grep --color=auto'
 
 # Proxy env configuration
-export http_proxy='http://192.168.21.1:7890'
-export https_proxy='http://192.168.21.1:7890'
+export http_proxy='http://127.0.0.1:7890'
+export https_proxy='http://127.0.0.1:7890'
+export all_proxy='http://127.0.0.1:7890'
 
 # where should we download your Zsh plugins?
 #ZPLUGINDIR=$ZDOTDIR/plugins
@@ -70,3 +71,32 @@ export NVM_DIR="$HOME/.nvm"
 
 # Created by `pipx` on 2024-05-03 15:56:13
 export PATH="$PATH:/home/jiang/.local/bin"
+
+# Cargo
+. "$HOME/.cargo/env"
+
+# bun completions
+[ -s "/home/jiangqiang/.bun/_bun" ] && source "/home/jiangqiang/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+# Created by `pipx` on 2025-03-08 04:31:24
+export PATH="$PATH:/home/jiangqiang/.local/bin"
+
+# pnpm
+export PNPM_HOME="/home/jiangqiang/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+
+if [[ "$TERM" = "xterm-kitty" ]] && [[ -z "$ZELLIJ" ]]; then
+  zellij attach general-workspace
+
+  if [[ "$ZELLIJ_AUTO_EXIT" == "true" ]]; then
+    exit
+  fi
+fi
